@@ -1,0 +1,404 @@
+{
+  "benchmark_clean": {
+    "deep": {
+      "overall": [
+        0.8774,
+        0.0067
+      ],
+      "AV": 0.8533,
+      "MV": 0.8761,
+      "PV": 0.8831,
+      "TV": 0.8918,
+      "Absent": 0.8882,
+      "Present": 0.851,
+      "per_state": {
+        "S1": 0.8649,
+        "systole": 0.8761,
+        "S2": 0.8506,
+        "diastole": 0.9179
+      }
+    },
+    "hsmm": {
+      "overall": [
+        0.729,
+        0.0124
+      ],
+      "AV": 0.6569,
+      "MV": 0.7448,
+      "PV": 0.7494,
+      "TV": 0.7483,
+      "Absent": 0.7339,
+      "Present": 0.7314,
+      "per_state": {
+        "S1": 0.7241,
+        "systole": 0.7259,
+        "S2": 0.6573,
+        "diastole": 0.8085
+      }
+    }
+  },
+  "noise_inband_white": {
+    "deep": {
+      "clean": 0.8673,
+      "snr10": 0.8323,
+      "snr5": 0.771,
+      "snr0": 0.5803
+    },
+    "hybrid": {
+      "clean": 0.848,
+      "snr10": 0.8311,
+      "snr5": 0.7919,
+      "snr0": 0.6918
+    },
+    "gated": {
+      "clean": 0.8673,
+      "snr10": 0.8348,
+      "snr5": 0.7782,
+      "snr0": 0.621
+    },
+    "oracle": {
+      "clean": 0.8871,
+      "snr10": 0.8623,
+      "snr5": 0.8154,
+      "snr0": 0.7026
+    },
+    "_tau": 0.199,
+    "hsmm": {
+      "clean": 0.729,
+      "snr10": 0.6973,
+      "snr5": 0.6565,
+      "snr0": 0.5799
+    }
+  },
+  "noise_inband_real": {
+    "deep": {
+      "clean": 0.8677,
+      "snr10": 0.8177,
+      "snr5": 0.739,
+      "snr0": 0.5872
+    },
+    "hybrid": {
+      "clean": 0.8482,
+      "snr10": 0.8211,
+      "snr5": 0.7726,
+      "snr0": 0.6629
+    },
+    "gated": {
+      "clean": 0.8683,
+      "snr10": 0.8176,
+      "snr5": 0.7461,
+      "snr0": 0.6046
+    },
+    "oracle": {
+      "clean": 0.8872,
+      "snr10": 0.8517,
+      "snr5": 0.7964,
+      "snr0": 0.6802
+    },
+    "_tau": 0.203,
+    "hsmm": {
+      "clean": 0.729,
+      "snr10": 0.6947,
+      "snr5": 0.6443,
+      "snr0": 0.5559
+    }
+  },
+  "violation_rate_inband_white": {
+    "clean": 0.055,
+    "snr10": 0.087,
+    "snr5": 0.135,
+    "snr0": 0.221
+  },
+  "confusion_systole_to_diastole_0dB": 0.24,
+  "cross_architecture_inband_white": {
+    "unet_wide_b32d5": {
+      "clean": {
+        "deep": 0.8648,
+        "hybrid": 0.8447
+      },
+      "snr0": {
+        "deep": 0.4428,
+        "hybrid": 0.6787
+      }
+    },
+    "cnn_bilstm": {
+      "clean": {
+        "deep": 0.8763,
+        "hybrid": 0.8488
+      },
+      "snr0": {
+        "deep": 0.4175,
+        "hybrid": 0.6908
+      }
+    }
+  },
+  "calibration": {
+    "clean_ece": 0.011,
+    "noisy_ece": 0.257,
+    "clean_conf": 0.85,
+    "clean_acc": 0.86,
+    "noisy_conf": 0.65,
+    "noisy_acc": 0.4
+  },
+  "significance_pairedWilcoxon_n1922": {
+    "gated_vs_deep_clean": {
+      "meanDelta": 0.0023,
+      "p": 0.33
+    },
+    "hybrid_vs_deep_0dB": {
+      "meanDelta": 0.162,
+      "p": 3e-273
+    },
+    "gated_vs_deep_0dB": {
+      "meanDelta": 0.098,
+      "p": 6e-149
+    },
+    "hybrid_vs_deep_5dB": {
+      "meanDelta": 0.058,
+      "p": 2e-95
+    }
+  },
+  "noise_inband_white_5seed_extended": {
+    "deep": {
+      "clean": [
+        0.8668,
+        0.0072
+      ],
+      "snr15": [
+        0.8525,
+        0.0086
+      ],
+      "snr10": [
+        0.8266,
+        0.0148
+      ],
+      "snr5": [
+        0.747,
+        0.0418
+      ],
+      "snr0": [
+        0.4735,
+        0.1402
+      ],
+      "snr-5": [
+        0.0477,
+        0.068
+      ]
+    },
+    "hybrid": {
+      "clean": [
+        0.8486,
+        0.0095
+      ],
+      "snr15": [
+        0.8446,
+        0.0102
+      ],
+      "snr10": [
+        0.8308,
+        0.0116
+      ],
+      "snr5": [
+        0.7897,
+        0.0125
+      ],
+      "snr0": [
+        0.6861,
+        0.0164
+      ],
+      "snr-5": [
+        0.4715,
+        0.0342
+      ]
+    },
+    "gated": {
+      "clean": [
+        0.8669,
+        0.0067
+      ],
+      "snr15": [
+        0.8542,
+        0.009
+      ],
+      "snr10": [
+        0.8299,
+        0.0154
+      ],
+      "snr5": [
+        0.7582,
+        0.0335
+      ],
+      "snr0": [
+        0.5871,
+        0.0505
+      ],
+      "snr-5": [
+        0.2757,
+        0.1439
+      ]
+    }
+  },
+  "ablation_gate_tau_star": 0.2013,
+  "ablation_smoothing_vs_hybrid": {
+    "clean": {
+      "deep": [
+        0.8668,
+        0.0072
+      ],
+      "median_best": [
+        0.8668,
+        0.0072
+      ],
+      "hybrid": [
+        0.8486,
+        0.0095
+      ]
+    },
+    "snr0": {
+      "deep": [
+        0.4735,
+        0.1402
+      ],
+      "median_best": [
+        0.4726,
+        0.1415
+      ],
+      "hybrid": [
+        0.6861,
+        0.0164
+      ]
+    },
+    "snr-5": {
+      "deep": [
+        0.0477,
+        0.068
+      ],
+      "median_best": [
+        0.0465,
+        0.0682
+      ],
+      "hybrid": [
+        0.4715,
+        0.0342
+      ]
+    }
+  },
+  "crosscorpus_cinc2016_labelfree": {
+    "n": 400,
+    "deep_violation_mean": 0.254,
+    "deep_violation_std": 0.149,
+    "hybrid_violation": 0.0,
+    "note": "hybrid==0 by construction (constrained decoder)",
+    "tau_star": 0.2,
+    "frac_above_tau_pct": 64
+  },
+  "boundary_f1_vs_snr_5seed": {
+    "deep": {
+      "clean": [
+        0.7041,
+        0.0128
+      ],
+      "15": [
+        0.7039,
+        0.0128
+      ],
+      "10": [
+        0.6972,
+        0.0139
+      ],
+      "5": [
+        0.6598,
+        0.0236
+      ],
+      "0": [
+        0.4937,
+        0.0987
+      ],
+      "-5": [
+        0.0616,
+        0.0613
+      ]
+    },
+    "hybrid": {
+      "clean": [
+        0.644,
+        0.0151
+      ],
+      "15": [
+        0.6399,
+        0.0159
+      ],
+      "10": [
+        0.6296,
+        0.0176
+      ],
+      "5": [
+        0.5964,
+        0.0181
+      ],
+      "0": [
+        0.5148,
+        0.0195
+      ],
+      "-5": [
+        0.3464,
+        0.0302
+      ]
+    },
+    "gated": {
+      "clean": [
+        0.6951,
+        0.0118
+      ],
+      "15": [
+        0.6847,
+        0.0119
+      ],
+      "10": [
+        0.6651,
+        0.014
+      ],
+      "5": [
+        0.6072,
+        0.0217
+      ],
+      "0": [
+        0.4792,
+        0.019
+      ],
+      "-5": [
+        0.2449,
+        0.1229
+      ]
+    }
+  },
+  "noiseaug_inband_3seed": {
+    "deep_noiseaug": {
+      "clean": 0.875,
+      "15": 0.873,
+      "10": 0.867,
+      "5": 0.849,
+      "0": 0.801,
+      "-5": 0.687
+    },
+    "deep_cleantrain": {
+      "clean": 0.867,
+      "10": 0.827,
+      "5": 0.747,
+      "0": 0.474,
+      "-5": 0.048
+    },
+    "hybrid": {
+      "clean": 0.849,
+      "10": 0.831,
+      "5": 0.79,
+      "0": 0.686,
+      "-5": 0.472
+    },
+    "hybrid_of_noiseaug": {
+      "0": 0.78,
+      "-5": 0.687
+    },
+    "note": "noise-aug deep beats training-free hybrid at every SNR; hybrid adds nothing on top of a robust model -> same failure fixed at train vs decode time"
+  }
+}
