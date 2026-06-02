@@ -10,6 +10,7 @@ paper/main_review*.json
 *.log
 *.out
 *.blg
+*.bbl
 *.toc
 *.synctex.gz
 *.fls
