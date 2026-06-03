@@ -127,9 +127,3 @@ deep/HSMM are 5-seed, hybrid 3-seed means (seeds 0–4).
 ## Citation
 
 To be added upon publication.
-
----
-
-## 科研辅导 · 合作
-
-需要**科研辅导、科研合作**，欢迎联系 **疏锦行**　微信：**shujinxing777**
