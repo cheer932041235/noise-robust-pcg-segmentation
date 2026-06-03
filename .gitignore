@@ -1,6 +1,9 @@
 # internal working notes (not for public release)
 docs/
 
+# manuscript / LaTeX source — kept LOCAL only, not published to the public repo
+paper/
+
 # AI review reports (internal)
 paper/main_review*.md
 paper/main_review*.json
