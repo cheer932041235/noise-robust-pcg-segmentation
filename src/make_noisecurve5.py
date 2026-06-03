@@ -59,7 +59,6 @@ for k, mk in [("deep", "o-"), ("hybrid", "s--"), ("gated", "^-")]:
     plt.errorbar(x, curves[k], yerr=errs[k], fmt=mk, capsize=3, color=ps.METHOD[k], label=k)
 plt.xticks(x, [t[1] for t in TAGS]); plt.gca().invert_xaxis()
 plt.xlabel("test SNR (in-band noise, dB)"); plt.ylabel("per-sample macro-F1")
-plt.title("In-band noise robustness (5 seeds, mean$\\pm$std)")
 plt.legend(); plt.grid(alpha=0.3)
 plt.tight_layout(); plt.savefig(f"{FIGS}/figA5_noise5seed.pdf"); plt.savefig(f"{FIGS}/figA5_noise5seed.png")
 

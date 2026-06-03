@@ -29,7 +29,6 @@ plt.bar(x - w / 2, deep, w, yerr=deep_e, capsize=3, color=ps.METHOD["deep"], lab
 plt.bar(x + w / 2, hsmm, w, yerr=hsmm_e, capsize=3, color=ps.METHOD["HSMM"], label="Springer HSMM")
 plt.xticks(x, labels); plt.ylim(0.55, 0.95)
 plt.ylabel("per-sample macro-F1 (clean)")
-plt.title("Fair benchmark on CirCor (5 seeds): deep dominates, both weakest at AV")
 plt.legend(); plt.grid(axis="y", alpha=0.3)
 plt.tight_layout(); plt.savefig(f"{FIGS}/figC_benchmark.pdf"); plt.savefig(f"{FIGS}/figC_benchmark.png")
 print(f"saved figC (deep overall {deep[0]:.3f}, hsmm {hsmm[0]:.3f})")

@@ -82,7 +82,6 @@ def main():
     ax.text(TAU + 0.01, ax.get_ylim()[1] * 0.92, f"$\\tau^*={TAU}$", fontsize=8, color=ps.METHOD["hybrid"])
     ax.text(0.97, 0.78, f"{above:.0f}\\% exceed $\\tau^*$", transform=ax.transAxes, ha="right", fontsize=8)
     ax.set_xlabel("deep cycle-violation rate"); ax.set_ylabel("\\# CinC 2016 recordings")
-    ax.set_title(f"Label-free shift on an unseen corpus (CinC 2016, n={len(dv)})", fontsize=8)
     fig.tight_layout(); fig.savefig(f"{FIGS}/figX_crosscorpus.pdf"); fig.savefig(f"{FIGS}/figX_crosscorpus.png")
     print(f"saved figX_crosscorpus (deep mean {dv.mean():.3f}, {above:.0f}% above tau)", flush=True)
 

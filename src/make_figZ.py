@@ -60,8 +60,6 @@ for ax, i in zip(axes.ravel(), idxs):
     ax.set_title(rf"deep F1 {df[i]:.2f} $\rightarrow$ hybrid F1 {hf[i]:.2f}", fontsize=7)
 leg = [plt.matplotlib.patches.Patch(facecolor=ps.STATE[k], label=ps.STATE_NAMES[k]) for k in (1, 2, 3, 4)]
 fig.legend(handles=leg, loc="lower center", ncol=4, fontsize=7, frameon=False, bbox_to_anchor=(0.5, -0.01))
-fig.suptitle("Representative held-out recordings at 0 dB: the hybrid repairs the fragmented deep cycle",
-             fontsize=8)
-fig.tight_layout(rect=[0, 0.04, 1, 0.96])
+fig.tight_layout(rect=[0, 0.04, 1, 0.98])
 fig.savefig(f"{FIGS}/figZ_gallery.pdf"); fig.savefig(f"{FIGS}/figZ_gallery.png")
 print("saved figZ_gallery", flush=True)

@@ -97,7 +97,7 @@ def main():
     plt.xticks(x, [t[1] for t in TAGS]); plt.gca().invert_xaxis()
     plt.xlabel("test SNR (in-band noise)"); plt.ylabel("per-sample macro-F1")
     plt.title("Noise robustness: deep vs hybrid vs gated"); plt.legend(); plt.grid(alpha=0.3)
-    plt.tight_layout(); plt.savefig(f"{FIGS}/figA_noise_curves{sfx}.png", dpi=150); plt.close()
+    plt.tight_layout(); plt.savefig(f"{FIGS}/figA_noise_curves{sfx}.pdf"); plt.savefig(f"{FIGS}/figA_noise_curves{sfx}.png", dpi=150); plt.close()
 
     # ---- Fig B: violation signal ----
     plt.figure(figsize=(6, 4))
@@ -105,8 +105,8 @@ def main():
     plt.axhline(tau, ls="--", color="k", alpha=0.6, label=f"gate τ={tau:.2f}")
     plt.xticks(x, [t[1] for t in TAGS]); plt.gca().invert_xaxis()
     plt.xlabel("test SNR (in-band noise)"); plt.ylabel("cycle-violation rate of deep output")
-    plt.title("Deep degradation is physiologically visible"); plt.legend(); plt.grid(alpha=0.3)
-    plt.tight_layout(); plt.savefig(f"{FIGS}/figB_violation{sfx}.png", dpi=150); plt.close()
+    plt.legend(); plt.grid(alpha=0.3)
+    plt.tight_layout(); plt.savefig(f"{FIGS}/figB_violation{sfx}.pdf"); plt.savefig(f"{FIGS}/figB_violation{sfx}.png", dpi=150); plt.close()
 
     print("curves:", {k: [round(v, 4) for v in curves[k]] for k in curves})
     print("viol:", [round(v, 3) for v in viol_m])

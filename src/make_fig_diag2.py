@@ -44,7 +44,7 @@ def berr(state):
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.6, 2.7))
 ax1.bar(range(4), f1, color=[ps.STATE[c] for c in STATES], edgecolor="#333", linewidth=0.6)
 ax1.set_xticks(range(4)); ax1.set_xticklabels(NAMES, fontsize=7); ax1.set_ylim(0.7, 0.95)
-ax1.set_ylabel("per-state F1 (clean)", fontsize=8); ax1.set_title("(a) S2 is the hardest state", fontsize=8)
+ax1.set_ylabel("per-state F1 (clean)", fontsize=8); ax1.set_title("(a) per-state F1", fontsize=8)
 for i, v in enumerate(f1):
     ax1.text(i, v + 0.003, f"{v:.3f}", ha="center", fontsize=6)
 for c, col in [(1, ps.STATE[1]), (3, ps.STATE[3])]:
